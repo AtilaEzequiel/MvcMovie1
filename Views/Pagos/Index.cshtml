@@ -1,0 +1,76 @@
+﻿@model IEnumerable<MvcMovie.Models.Pago>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Empleados</h1>
+
+<p>
+    <a asp-action="Create"><input type="submit" value="Agregar nuevo empleado" class="btn btn-primary" /></> </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CondIva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cuit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RazonSocial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Domicilio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CondVenta)
+            </th>
+            <th>
+                Editar|Ver|Borrar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CondIva)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cuit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RazonSocial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Domicilio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CondVenta)
+                </td>
+                <td>
+
+                    <a asp-action="Edit" asp-route-id="@item.Cuit"> <input type="submit" value="Editar" class="btn btn-primary" /></a> |
+                    <a asp-action="Details" asp-route-id="@item.Cuit"><input type="submit" value="Detalle" class="btn btn-primary" /></a> |
+                    <a asp-action="Delete" asp-route-id="@item.Cuit"><input type="submit" value="Borrar" class="btn btn-primary" /></a>
+                    @*<a asp-action="Delete" asp-route-id="@item.Id">Borrar</a>*@
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
