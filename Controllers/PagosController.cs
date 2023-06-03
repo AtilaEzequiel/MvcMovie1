@@ -88,8 +88,7 @@ namespace MvcMovie.Controllers
             {
                 // pagoList.SaveChangesAsync(pag);
                 var pago = pagoList.SingleOrDefault(a => a.Cuit == id);
-                // pago.Domicilio=pag.Domicilio; pagoList.Remove(pago); pagoList.Add(pago);
-                
+
                 pagoList.Append(pag);
                 pago.RazonSocial = pag.RazonSocial;
                 pago.CondVenta = pag.CondVenta;
