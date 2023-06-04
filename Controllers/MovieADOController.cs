@@ -292,12 +292,6 @@ namespace MvcMovie.Controllers
                 SqlCommand command = new SqlCommand(queryString, connection);
                 //  command.ExecuteReader(queryString);
                 command.Parameters.AddWithValue("@Id", mov.Id);
-                //command.Parameters.AddWithValue("@titulo", mov.Title);
-                //command.Parameters.AddWithValue("@fecha", mov.ReleaseDate);
-                //command.Parameters.AddWithValue("@genero", mov.Genre);
-                //command.Parameters.AddWithValue("@precio", mov.Price);
-
-
 
 
                 SqlDataReader reader = command.ExecuteReader();

@@ -1,6 +1,379 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!-- Compiled and minified Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+<!-- Minified JS library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+<div class="text-center">
+    <h1 class="display-1">INSTITUTO SUPERIOIR NUESTRA SEÑORA DE LA PAZ</h1>
+</div>
+
+
+
+<!-- ventana emergente-->
+<!-- Botón en HTML (lanza el modal en Bootstrap) -->
+@*<a href="#victorModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">Abrir ventana modal</a>
+  
+<!-- Modal / Ventana / Overlay en HTML -->
+<div id="victorModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">¿Estás seguro?</h4>
+            </div>
+            <div class="modal-body">
+                <p>¿Seguro que quieres borrar este elemento?</p>
+                <p class="text-warning"><small>Si lo borras, nunca podrás recuperarlo.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+*@
+<!---->
+
+<div class="container-fluid">
+    <div id="myCarousel" class=" carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner "  >
+            <div class="item active  " >
+                <img src="images/inst.jpg" width="100%"  alt="">
+    <!--            <img src="images/inst1.jpeg" width="400px" alt=""> -->
+            </div>
+            <div class="item">
+                <img src="images/inst1.jpg" width="100%" alt="">
+            </div>
+            <div class="item">
+                <img src="images/inst3.jpg" width="100%"  alt="">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Carreras</h1>
+    <!--<h2 class="display-6"> Modelos</h2>-->
+   @*<p>
+         <a asp-controller="Movies" asp-action="Index" class="modal-content" ><input type="submit" value="Movies" class="btn btn-primary  " /> </a>
+    </p*@ 
+
+    <hr />
+   <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+            <img src="images/logo1.jpeg" width="100%"  alt="">
+          <h3>Analista de Sistemas</h3>
+          <p>
+              <a asp-controller="Movies" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+          </p>
+          
+        </div>
+        <div class="col-sm-4">
+            <img src="images/logo2.jpeg" width="100%"  alt="">
+          <h3>Administracion de Empresas</h3>
+          <p>
+                <a asp-controller="Pagos" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+
+          </p>
+         
+        </div>
+        <div class="col-sm-4">
+            <img src="images/logo3.jpeg" width="100%"  alt="">
+          <h3>Guia de Turismo</h3>
+          <p>
+                <a asp-controller="MovieADO" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+
+          </p>
+          <p>
+         
+        </div>
+        <div class="col-sm-4">
+            <img src="images/logo4.jpeg" width="100%"  alt="">
+          <h3>Periodismo Deportivo</h3>
+          <p>
+              <a asp-controller="Movies" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+          </p>
+          
+        </div>
+        <div class="col-sm-4">
+            <img src="images/logo5.jpeg" width="100%"  alt="">
+          <h3>Psicopedagogia</h3>
+          <p>
+                <a asp-controller="Pagos" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+
+          </p>
+         
+        </div>
+        <div class="col-sm-4">
+            <img src="images/logo6.jpeg" width="100%"  alt="">
+          <h3>Profesorado de Ingles</h3>
+          <p>
+                <a asp-controller="MovieADO" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+
+          </p>
+          <p>
+         
+        </div>
+
+
+
+        <div class="col-sm-4">
+            <img src="images/logo6.jpeg" width="100%"  href="#victorModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">
+          <h3>Profesorado de Ingles</h3>
+          <p>
+                <a asp-controller="MovieADO" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+
+          </p>
+          <p>
+         <!-- Modal / Ventana / Overlay en HTML -->
+                <div id="victorModal" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title">Profesorado de ingles</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Título: Profesor/a de Educación Superior en Inglés
+                                    <br />
+                                    <br />
+                                   Incumbencias profesionales:
+                                   <br />
+                                   <br />
+                                    El Profesor de Educación Superior en Inglés, podrá desempeñarse en el Nivel Inicial, Primario, Medio y Superior. Al finalizar su carrera, será capaz de:
+                                    <br />
+                                    <br />
+                                    Reconocer los conceptos y principios teóricos y prácticos que estructuran la educación inclusiva, en el ámbito nacional e internacional.
+                                    Contribuir a la construcción de escuelas como comunidades de aprendizaje que respeten, promuevan y valoren los logros de todos los estudiantes.
+                                    Identificar y dar respuesta a las barreras para el aprendizaje y sus implicaciones metodológicas.
+                                    Trabajar en equipo, manifestando una actitud de colaboración con los colegas, autoridades y familias.
+                                    Facilitar enfoques cooperativos de aprendizaje promoviendo valores evangélicos desde su práctica.
+                                    Brindar asesoramiento didáctico a instituciones en los diferentes niveles del sistema educativo.
+                                    Planificar, conducir y evaluar programas de formación, perfeccionamiento y actualización para el desempeño de la docencia en distintos niveles del sistema educativo.
+                                    Comprender con profundidad los contenidos del idioma inglés.
+                                    <br />
+                                    <br />
+                                    Establecer relaciones entre la propia disciplina y otras áreas del conocimiento.
+                                    Reflexionar sobre la propia práctica docente y participar en proyectos de investigación.
+                                    <br />
+                                    <br />
+
+                                    <a href="#victorModal1" role="button" class="btn btn-large btn-primary" data-toggle="modal">Abrir ventana modal</a>
+                                    <!-- Modal / Ventana / Overlay en HTML -->
+                                    <div id="victorModal1" class="modal fade">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title">¿Estás seguro?</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <table class="table table-bordered">
+                                                      <thead>
+                                                       @*
+
+                                                       <tr>
+                                                          <th scope="col"></th>
+                                                          <th scope="col">First</th>
+                                                          <th scope="col">Last</th>
+                                                          <th scope="col">Handle</th>
+                                                        </tr>
+                                                        *@ 
+                                                      </thead>
+                                                      <tbody>
+                                                        <tr>
+                                          
+                                                          <td colspan="2">Campo de formacion especifica</td>
+                                          
+                                                        </tr>
+                                                        <tr>
+                                         
+                                                          <td>Lengua y Producción Literaria
+                                                              <br />
+                                                            Lengua, Arte y Medios de Comunic.
+                                                            <br />
+                                                            Lengua y Comunicación Contemporánea
+                                                            <br />
+                                                            Fonética
+                                                            <br />
+                                                            Fonética y su Didáctica
+                                                            <br />
+                                                            Dicción y su Didáctica
+                                                            <br />
+                                                            Gramática Inglesa
+                                                            <br />
+                                                            Gramática y Análisis del Discurso
+                                                            <br />
+                                                            Lingüística y Pragmática
+                                                            <br />
+                                                            Historia II
+                                                            <br />
+                                                            Literatura del Sigle XX
+                                                            <br />
+                                                          </td>
+                                                          <td>Didáctica del Nivel Inicial y Primario
+                                                              <br />
+                                                                Didáctica del Nivel Secundario
+                                                                <br />
+                                                                Didáctica del Nivel Superior
+                                                                <br />
+                                                                Literatura Infanto-juvenil
+                                                                <br />
+                                                                Psicología del Niño y del Adolescente
+                                                                <br />
+                                                                Psicología del Adulto
+                                                                <br />
+                                                                Cultura Norteamericana Contemporánea
+                                                                <br />
+                                                                Cultura Inglesa Contemporánea
+                                                                <br />
+                                                                Cultura Anglosajona
+                                                                <br />
+                                                                Historia I
+                                                                <br />
+                                                                Literatura del Siglo XX
+                                                                <br />
+
+                                                          </td>
+                                          
+                                                        </tr>
+                                        
+                                                      </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                    <button type="button" class="btn btn-danger">Eliminar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <table class="table table-bordered">
+                                      <thead>
+                                       @*
+
+                                       <tr>
+                                          <th scope="col"></th>
+                                          <th scope="col">First</th>
+                                          <th scope="col">Last</th>
+                                          <th scope="col">Handle</th>
+                                        </tr>
+                                        *@ 
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          
+                                          <td colspan="2">Campo de formacion especifica</td>
+                                          
+                                        </tr>
+                                        <tr>
+                                         
+                                          <td>Lengua y Producción Literaria
+                                              <br />
+                                            Lengua, Arte y Medios de Comunic.
+                                            <br />
+                                            Lengua y Comunicación Contemporánea
+                                            <br />
+                                            Fonética
+                                            <br />
+                                            Fonética y su Didáctica
+                                            <br />
+                                            Dicción y su Didáctica
+                                            <br />
+                                            Gramática Inglesa
+                                            <br />
+                                            Gramática y Análisis del Discurso
+                                            <br />
+                                            Lingüística y Pragmática
+                                            <br />
+                                            Historia II
+                                            <br />
+                                            Literatura del Sigle XX
+                                            <br />
+                                          </td>
+                                          <td>Didáctica del Nivel Inicial y Primario
+                                              <br />
+                                                Didáctica del Nivel Secundario
+                                                <br />
+                                                Didáctica del Nivel Superior
+                                                <br />
+                                                Literatura Infanto-juvenil
+                                                <br />
+                                                Psicología del Niño y del Adolescente
+                                                <br />
+                                                Psicología del Adulto
+                                                <br />
+                                                Cultura Norteamericana Contemporánea
+                                                <br />
+                                                Cultura Inglesa Contemporánea
+                                                <br />
+                                                Cultura Anglosajona
+                                                <br />
+                                                Historia I
+                                                <br />
+                                                Literatura del Siglo XX
+                                                <br />
+
+                                          </td>
+                                          
+                                        </tr>
+                                        
+                                      </tbody>
+                                    </table>
+                                </p>
+                                <p class="text-warning"><small>Si lo borras, nunca podrás recuperarlo.</small></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+
+
+
+        
+      </div>
+    </div>
+
+
+  
+
+    
+    
+</div>
+
+
 
 <div class="text-center">
     <h1 class="display-4">Indice Atila NIsio</h1>
