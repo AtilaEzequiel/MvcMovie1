@@ -1,6 +1,9 @@
-﻿@{
+﻿@model MvcMovie.Models.Carrera
+@{
     ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
 }
+
 <!-- Compiled and minified Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 <!-- Minified JS library -->
@@ -137,8 +140,87 @@
 
           </p>
           <p>
+            @*
+              @RenderSection("pri", required:false);
+              *@  
+          </p>
+          <!-- render selection-->
+          @section Footer{
+                <div class="col-sm-4">
+                        <img src="images/logo1.jpeg" width="100%"  alt="">
+                      <h3>Analista de Sistemas</h3>
+                      <p>
+                          <a asp-controller="Movies" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+                      </p>
+          
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="images/logo2.jpeg" width="100%"  alt="">
+                      <h3>Administracion de Empresas</h3>
+                      <p>
+                            <a asp-controller="Pagos" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+
+                      </p>
          
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="images/logo3.jpeg" width="100%"  alt="">
+                      <h3>Guia de Turismo</h3>
+                      <p>
+                            <a asp-controller="MovieADO" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+
+                      </p>
+                      <p>
+         
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="images/logo4.jpeg" width="100%"  alt="">
+                      <h3>Periodismo Deportivo</h3>
+                      <p>
+                          <a asp-controller="Movies" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+                      </p>
+          
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="images/logo5.jpeg" width="100%"  alt="">
+                      <h3>Psicopedagogia</h3>
+                      <p>
+                            <a asp-controller="Pagos" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+
+                      </p>
+         
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="images/logo6.jpeg" width="100%"  alt="">
+                      <h3>Profesorado de Ingles</h3>
+                      <p>
+                            <a asp-controller="MovieADO" asp-action="Index" class="modal-content" ><input type="submit" value="Horarios" class="btn btn-primary  " /> </a>
+
+                  </p>
+            }
+            @section Scripts{
+                <script type="text/javascript" src="~/js/jquery.min.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        
+                    });
+                </script>
+            }
+         
+  @*          @RenderSection("Footer", required: true);
+
+           @RenderSectionAsync("Scripts", required: false)
+           *@
         </div>
+        
+           
+         
+           
+           
+         
+          
+         
+
 
 
 
@@ -159,30 +241,28 @@
                                 <h4 class="modal-title">Profesorado de ingles</h4>
                             </div>
                             <div class="modal-body">
-                                <p>Título: Profesor/a de Educación Superior en Inglés
-                                    <br />
-                                    <br />
-                                   Incumbencias profesionales:
-                                   <br />
-                                   <br />
-                                    El Profesor de Educación Superior en Inglés, podrá desempeñarse en el Nivel Inicial, Primario, Medio y Superior. Al finalizar su carrera, será capaz de:
-                                    <br />
-                                    <br />
-                                    Reconocer los conceptos y principios teóricos y prácticos que estructuran la educación inclusiva, en el ámbito nacional e internacional.
-                                    Contribuir a la construcción de escuelas como comunidades de aprendizaje que respeten, promuevan y valoren los logros de todos los estudiantes.
-                                    Identificar y dar respuesta a las barreras para el aprendizaje y sus implicaciones metodológicas.
-                                    Trabajar en equipo, manifestando una actitud de colaboración con los colegas, autoridades y familias.
-                                    Facilitar enfoques cooperativos de aprendizaje promoviendo valores evangélicos desde su práctica.
-                                    Brindar asesoramiento didáctico a instituciones en los diferentes niveles del sistema educativo.
-                                    Planificar, conducir y evaluar programas de formación, perfeccionamiento y actualización para el desempeño de la docencia en distintos niveles del sistema educativo.
-                                    Comprender con profundidad los contenidos del idioma inglés.
-                                    <br />
-                                    <br />
-                                    Establecer relaciones entre la propia disciplina y otras áreas del conocimiento.
-                                    Reflexionar sobre la propia práctica docente y participar en proyectos de investigación.
-                                    <br />
-                                    <br />
+                                <dt class = "col-sm-2">
+                                     @Html.DisplayNameFor(model => model.Name)
+                                </dt>
+        
+                                <dd class = "col-sm-10">
+                                    @Html.DisplayFor(model => model.Name)
+                                </dd>
 
+                                <hr />
+                                <dt class = "col-sm-2">
+                                    @Html.DisplayNameFor(model => model.Description)
+                                </dt>
+                                <dd class = "col-sm-10">
+                                    @Html.DisplayFor(model => model.Description)
+                                </dd>
+                                
+                                   
+                                       
+                                        
+                                    
+                                    
+                                 
                                     <a href="#victorModal1" role="button" class="btn btn-large btn-primary" data-toggle="modal">Abrir ventana modal</a>
                                     <!-- Modal / Ventana / Overlay en HTML -->
                                     <div id="victorModal1" class="modal fade">
